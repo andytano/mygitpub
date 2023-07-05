@@ -2,8 +2,8 @@
 TARGET := k12s
 
 # DIRECTORIES
-EXE_DIR := ../exe/
-OBJ_DIR := ../obj/
+EXE_DIR := ~/works/exe/
+OBJ_DIR := ~/works/obj/
 SRC_DIR := ./
 
 # SOURCE FILES
@@ -29,7 +29,7 @@ all: $(EXE_DIR)$(TARGET)
 # LINK OBJECTS
 $(EXE_DIR)$(TARGET): $(OBJS)
 	mkdir -p $(EXE_DIR)
-	$(CC) $(CFLAGS) -o $(EXE_DIR)$@ $(OBJS) $(LFLAGS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LFLAGS)
 
 # COMPILE SOURCES
 $(OBJ_DIR)%.o: %.c $(HEADERS)
